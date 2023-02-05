@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(216deg, 12%, 8%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 100%);
+  width: 1440px;
+}
+
+p {
+  font-size: 15px;
+  color: hsl(216deg, 12%, 54%);
+  line-height: 1.5;
+}
+
+.card {
+  padding: 1.5rem;
+  width: 25vw;
+  height: 55vh;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 1.25rem;
+}
+
+.star {
+  background-color: hsl(213deg, 12%, 24%);
+  color: hsl(216deg, 12%, 54%);
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.separation-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.rating button {
+  background-color: hsl(213deg, 12%, 24%);
+  color: hsl(216deg, 12%, 54%);
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+}
+.rating button:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+.rating .btn-active {
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.submit {
+  width: 100%;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+  transition: 0.5s;
+}
+
+.thank-you-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-score {
+  background-color: hsl(213deg, 12%, 24%);
+  color: hsl(25deg, 97%, 53%);
+  padding: 5px 10px;
+  border-radius: 2rem;
+  border: none;
+  width: 55%;
+  text-align: center;
+}
+
+.appreciate {
+  text-align: center;
+  padding: 0 6px;
+}
+
+.thank-you-state {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 375px;
+  }
+  .card {
+    width: 92vw;
+    height: 40vh;
+  }
+  .rating-score {
+    width: 60%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

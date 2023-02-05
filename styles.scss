@@ -1,0 +1,159 @@
+// Width
+$desktopWidth: 1440px;
+$mobileWidth: 375px;
+
+// Colors
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$lighGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$darkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 12%, 8%);
+$darkLightBlue: hsl(213, 12%, 24%);
+
+// Fonts
+$paragraphFontSize: 15px;
+$overpass: 'Overpass', sans-serif;
+
+// Separation
+$separation: 1.5rem;
+
+@mixin circle{
+    background-color: $darkLightBlue;
+    color: $mediumGrey;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    font-weight: 700;
+    height: 3rem;
+    width: 3rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $veryDarkBlue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: {
+        family: $overpass;
+        weight: 400;
+    }
+    color: $white;
+    width: $desktopWidth;
+}
+
+p{
+    font-size: $paragraphFontSize;
+    color: $mediumGrey;
+    line-height: 1.5;
+}
+
+.card{
+    padding: 1.5rem;
+    width: 25vw;
+    height: 55vh;;
+    background-color: $darkBlue;
+    border-radius: 1.25rem;
+}
+
+.star{
+    @include circle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $separation;
+}
+
+.separation-bottom{
+    margin-bottom: $separation;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: $separation;
+
+    button{
+        @include circle;
+    }
+
+    button:hover{
+        background-color: $orange;
+        color: $white;
+    }
+
+    .btn-active{
+        background-color: $lighGrey;
+        color: $white;
+    }
+}
+
+
+.submit{
+    width: 100%;
+    background-color: $orange;
+    color: $white;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+.submit:hover{
+    background-color: $white;
+    color: $orange;
+    transition: 0.5s;
+}
+
+.thank-you-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-score{
+    background-color: hsl(213deg, 12%, 24%);
+    color: hsl(25deg, 97%, 53%);
+    padding: 5px 10px;
+    border-radius: 2rem;
+    border: none;
+    width: 55%;
+    text-align: center;
+}
+
+.appreciate{
+    text-align: center;
+    padding: 0 6px;
+}
+
+.thank-you-state{
+    display: none;
+}
+
+@media (max-width: 480px) {
+    body{
+        width: $mobileWidth;
+    }
+
+    .card{
+        width: 92vw;
+        height: 40vh;;
+    }
+
+    .rating-score{
+        width: 60%;;
+    }
+}

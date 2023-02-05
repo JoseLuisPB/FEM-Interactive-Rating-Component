@@ -4,46 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./main.js" defer></script>
+  <title>Frontend Mentor | Interactive rating component</title>
 </head>
 <body>
-
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
+  <main>
+    <div class="card">
+        <!-- Rating state -->
+            <div id="rating-state">
+                <div class="star">
+                    <img src="./images/icon-star.svg" alt="star" />
+                </div>
+                <h2 class="separation-bottom">How did we do?</h2>
+                <p class="separation-bottom">Please let us know how we did with your support request. All feedback is appreciated 
+                    to help us improve our offering!
+                </p>
+                <div class="rating">
+                    <button id="rating1" onclick="ratingButtonHandler('rating1')">1</button>
+                    <button id="rating2" onclick="ratingButtonHandler('rating2')">2</button>
+                    <button id="rating3" onclick="ratingButtonHandler('rating3')">3</button>
+                    <button id="rating4" onclick="ratingButtonHandler('rating4')">4</button>
+                    <button id="rating5" onclick="ratingButtonHandler('rating5')">5</button>
+                </div>
+                <button id="submit" type="submit" class="submit" onclick="submitRating()">Submit</button>
+            </div>
+            <!-- Thank you state -->
+            <div id="thank-you-state" class="thank-you-state" style="margin-top: 1rem;">
+                <img src="./images/illustration-thank-you.svg" alt="thank you" style="margin-bottom: 2rem;;"/>
+                <p class="rating-score" style="margin-bottom:2rem;">You selected <span id="ratingValue">4</span> out of 5</p>
+                <h2 style="margin-bottom: 0.5rem;">Thank you!</h2>
+                <p class="appreciate">We appreciate you taking the time to give a rating. If you ever need more support, 
+                    don’t hesitate to get in touch!
+                </p>
+            </div>
+    </div>
+  </main>
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
