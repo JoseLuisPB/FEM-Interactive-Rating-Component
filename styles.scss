@@ -47,6 +47,7 @@ body{
     }
     color: $white;
     width: $desktopWidth;
+    overflow: hidden;
 }
 
 p{
@@ -143,17 +144,33 @@ p{
     display: none;
 }
 
+.fade-in {
+    animation-name: fadein-animation;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadein-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 @media (max-width: 480px) {
     body{
         width: $mobileWidth;
+        overflow-y: scroll;
     }
 
     .card{
-        width: 92vw;
-        height: 40vh;;
+        width: 94vw;
+        height: 40vh;
     }
 
     .rating-score{
-        width: 60%;;
+        width: 60%;
     }
 }

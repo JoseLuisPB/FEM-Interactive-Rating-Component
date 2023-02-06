@@ -26,8 +26,11 @@ function setRating(element){
 }
 
 function submitRating(){
-    document.getElementById('rating-state').style.display = 'none';
-    document.getElementById('thank-you-state').classList.remove('thank-you-state');
-    document.getElementById('thank-you-state').classList.add('thank-you-layout');
-    document.getElementById('ratingValue').innerHTML = ratingSelected;
+    if (ratingSelected !== null ){
+        document.getElementById('rating-state').style.display = 'none';
+        document.getElementById('thank-you-state').classList.remove('thank-you-state');
+        document.getElementById('thank-you-state').classList.add('thank-you-layout');
+        document.getElementById('thank-you-state').classList.add('fade-in');
+        document.getElementById('ratingValue').innerHTML = ratingSelected;
+    }
 }
