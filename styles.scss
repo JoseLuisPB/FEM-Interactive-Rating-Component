@@ -59,7 +59,7 @@ p{
 .card{
     padding: 1.5rem;
     width: 25vw;
-    height: 55vh;;
+    min-height: 55vh;;
     background-color: $darkBlue;
     border-radius: 1.25rem;
 }
@@ -76,6 +76,11 @@ p{
     margin-bottom: $separation;
 }
 
+#rating-state .rating .btn-active{
+    background-color: $lighGrey;
+    color: $white;
+}
+
 .rating{
     display: flex;
     flex-direction: row;
@@ -90,13 +95,7 @@ p{
         background-color: $orange;
         color: $white;
     }
-
-    .btn-active{
-        background-color: $lighGrey;
-        color: $white;
-    }
 }
-
 
 .submit{
     width: 100%;
@@ -118,6 +117,10 @@ p{
     transition: 0.5s;
 }
 
+.thank-you-state{
+    display: none;
+}
+
 .thank-you-layout{
     display: flex;
     flex-direction: column;
@@ -126,8 +129,8 @@ p{
 }
 
 .rating-score{
-    background-color: hsl(213deg, 12%, 24%);
-    color: hsl(25deg, 97%, 53%);
+    background-color: $darkLightBlue;
+    color: $orange;
     padding: 5px 10px;
     border-radius: 2rem;
     border: none;
@@ -140,24 +143,20 @@ p{
     padding: 0 6px;
 }
 
-.thank-you-state{
-    display: none;
-}
-
 .fade-in {
     animation-name: fadein-animation;
     animation-duration: 2000ms;
     animation-fill-mode: forwards;
-  }
-  
-  @keyframes fadein-animation {
+}
+
+@keyframes fadein-animation {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 @media (max-width: 480px) {
     body{
@@ -167,7 +166,7 @@ p{
 
     .card{
         width: 94vw;
-        height: 40vh;
+        min-height: 40vh;
     }
 
     .rating-score{
