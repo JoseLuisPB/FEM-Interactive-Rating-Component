@@ -22,7 +22,6 @@ function addClassActive(element){
 
 function setRating(element){
     ratingSelected = element;
-    console.log(ratingSelected);
 }
 
 function submitRating(){
