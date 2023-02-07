@@ -62,7 +62,7 @@ Mobile - Thank you
 
 ### Continued development
 
-On future projects I want to focus in transitions and animations because it is something I do not practice very often and gives the component a more profesional look.
+On future projects I want to focus in animations because it is something I do not practice very often and gives the component a more profesional look.
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
